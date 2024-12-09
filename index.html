@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ekolojik Kredi Sistemi</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f9ff;
+    }
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+    }
+    header img {
+      border-radius: 50%;
+      height: 50px;
+      margin-right: 10px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    main {
+      display: flex;
+    }
+    nav {
+      width: 25%;
+      background-color: #f0f0f0;
+      padding: 10px;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    }
+    nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    nav ul li {
+      margin: 10px 0;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #007bff;
+      font-weight: bold;
+    }
+    section {
+      width: 75%;
+      padding: 20px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .form-group input, .form-group select {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    button {
+      padding: 10px 15px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      font-size: 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    footer {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #f0f0f0;
+      text-align: center;
+      font-size: 14px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    table th, table td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+    table th {
+      background-color: #007bff;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="https://via.placeholder.com/50" alt="Logo">
+  <h1>Ekolojik Kredi Sistemi</h1>
+</header>
+
+<main>
+  <!-- Sol Menü -->
+  <nav>
+    <ul>
+      <li><a href="#nedir">Nedir?</a></li>
+      <li><a href="#ekolojik-kredi">Ekolojik Kredi</a></li>
+      <li><a href="#hazirlayanlar">Hazırlayanlar</a></li>
+      <li><a href="#bize-ulasin">Bize Ulaşın</a></li>
+      <li><a href="#kayit-ol">Kayıt Ol</a></li>
+      <li><a href="#veri-giris">Veri Girişi</a></li>
+      <li><a href="#veri-goruntule">Veri Görüntüle</a></li>
+    </ul>
+  </nav>
+
+  <!-- Sağ İçerik -->
+  <section id="icerik">
+    <!-- İçerik Başlangıç -->
+    <h2>Hoş Geldiniz</h2>
+    <p>Ekolojik Kredi Sistemi ile geri dönüşümünüzü yönetin ve çevreye katkı sağlayın!</p>
+
+    <div id="kayit-ol">
+      <h3>Kayıt Ol</h3>
+      <div class="form-group">
+        <label for="adi">Adınız:</label>
+        <input type="text" id="adi" name="adi">
+      </div>
+      <div class="form-group">
+        <label for="soyadi">Soyadınız:</label>
+        <input type="text" id="soyadi" name="soyadi">
+      </div>
+      <div class="form-group">
+        <label for="okul">Okul Adı:</label>
+        <input type="text" id="okul" name="okul">
+      </div>
+      <button>Kayıt Ol</button>
+    </div>
+
+    <div id="veri-giris">
+      <h3>Veri Girişi</h3>
+      <form>
+        <div class="form-group">
+          <label for="ogrenci-adi">Öğrenci Adı:</label>
+          <input type="text" id="ogrenci-adi" name="ogrenci-adi">
+        </div>
+        <div class="form-group">
+          <label for="ogrenci-numara">Öğrenci Numarası:</label>
+          <input type="text" id="ogrenci-numara" name="ogrenci-numara">
+        </div>
+        <div class="form-group">
+          <label for="atik-turu">Atık Türü:</label>
+          <select id="atik-turu">
+            <option value="yag">Yağ</option>
+            <option value="tekstil">Tekstil</option>
+            <option value="pil">Pil</option>
+            <option value="elektronik">Elektronik</option>
+            <option value="kagit">Kağıt</option>
+            <option value="cam">Cam</option>
+            <option value="metal">Metal</option>
+            <option value="plastik">Plastik</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="miktar">Miktar (kg/adet):</label>
+          <input type="number" id="miktar" name="miktar">
+        </div>
+        <div class="form-group">
+          <label for="kayit-yapan">Kaydı Yapan:</label>
+          <input type="text" id="kayit-yapan" name="kayit-yapan">
+        </div>
+        <button type="button" onclick="kayitEkle()">Kaydet</button>
+      </form>
+    </div>
+
+    <div id="veri-goruntule">
+      <h3>Veri Görüntüle</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Tarih</th>
+            <th>Atık Türü</th>
+            <th>Miktar</th>
+            <th>Kazanılan Puan</th>
+            <th>Kaydı Yapan</th>
+          </tr>
+        </thead>
+        <tbody id="kayitlar"></tbody>
+      </table>
+    </div>
+  </section>
+</main>
+
+<footer>
+  Torbalı Anadolu Lisesi Coğrafya Proje Ödevi Ekolojik Kredi Örnek Sitesidir  
+  <br>Danışman Öğretmen: Osman Onuk | Öğrenciler: Muhammedcan Arslanparçası, Bilal Yiğit Tezcan, Yağız Efe Yılmaz
+</footer>
+
+<script>
+  const kayitlar = [];
+
+  function kayitEkle() {
+    const ogrenciAdi = document.getElementById("ogrenci-adi").value;
+    const ogrenciNumara = document.getElementById("ogrenci-numara").value;
+    const atikTuru = document.getElementById("atik-turu").value;
+    const miktar = document.getElementById("miktar").value;
+    const kayitYapan = document.getElementById("kayit-yapan").value;
+
+    const puanlama = {
+      yag: 5,
+      tekstil: 3,
+      pil: 2,
+      elektronik: 6,
+      kagit: 2,
+      cam: 1,
+      metal: 4,
+      plastik: 2
+    };
+
+    const kazanilanPuan = atikTuru === "pil" ? miktar * puanlama[atikTuru] : miktar * puanlama[atikTuru];
+    const tarih = new Date().toLocaleDateString();
+
+    kayitlar.push({ tarih, atikTuru, miktar, kazanilanPuan, kayitYapan });
+
+    const tbody = document.getElementById("kayitlar");
+    tbody.innerHTML += `
+      <tr>
+        <td>${tarih}</td>
+        <td>${atikTuru}</td>
+        <td>${miktar} ${atikTuru === "pil" ? "adet" : "kg"}</td>
+        <td>${kazanilanPuan} puan</td>
+        <td>${kayitYapan}</td>
+      </tr>
+    `;
+
+    alert("Kayıt başarıyla eklendi!");
+    document.getElementById("ogrenci-adi").value = "";
+    document.getElementById("ogrenci-numara").value = "";
+    document.getElementById("atik-turu").value = "yag";
+    document.getElementById("miktar").value = "";
+    document.getElementById("kayit-yapan").value = "";
+  }
+</script>
+
+</body>
+</html>
